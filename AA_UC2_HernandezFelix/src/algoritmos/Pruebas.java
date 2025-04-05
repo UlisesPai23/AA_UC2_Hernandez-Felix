@@ -4,17 +4,32 @@
  */
 package algoritmos;
 
+import java.util.Arrays;
+
 /**
  *
  * @author PC WHITE WOLF
  */
 public class Pruebas {
+public static void main(String[] args) {
+        // Instancias
+        Ordenamientos ordenar = new Ordenamientos();
+        Busqueda buscar = new Busqueda();
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+        // Arreglo original
+        int[] arreglo = {5, 2, 9, 1, 3};
+
+        // Mostrar arreglo original
+        System.out.println("Arreglo original: " + Arrays.toString(arreglo));
+
+        // Prueba de ordenamiento
+        ordenar.bubbleSort(arreglo);
+        System.out.println("Ordenado con Bubble Sort: " + Arrays.toString(arreglo));
+
+        // Prueba de búsqueda lineal
+        int valor = 3;
+        int indice = buscar.busquedaLineal(arreglo, valor);
+        System.out.println("Índice de " + valor + ": " + indice);
     }
     
 }
